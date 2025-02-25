@@ -20,6 +20,8 @@ app.use(
     origin: [
       "http://localhost:3000",
       "http://192.168.1.2:5173/",
+      "https://wisenosh.netlify.app/",
+      "https://wisenosh.netlify.app",
       "http://192.168.1.2:5173",
       "http://localhost:5173/",
       "http://localhost:5173",
