@@ -9,28 +9,32 @@ const app = express();
 app.use(morgan("dev"));
 app.use(express.json());
 app.use((req, res, next) => {
-  res.setHeader("bypass-tunnel-reminder", "Express");
+  // res.setHeader("bypass-tunnel-reminder", "Express");
+  res.header("Access-Control-Allow-Origin", "*"); // Change * to specific origin if needed
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
   // res.setHeader("Content-Type", "application/json");
   next(); // Pass control to the next handler
 });
 
 // app.use(express.urlencoded({ extended: true }));
-app.use(
-  cors()
-  // {
-  //   origin: [
-  //     "http://localhost:3000",
-  //     "http://192.168.1.2:5173/",
-  //     "https://wisenosh.netlify.app/",
-  //     "https://wisenosh.netlify.app",
-  //     "http://192.168.1.2:5173",
-  //     "http://localhost:5173/",
-  //     "http://localhost:5173",
-  //     "https://smartbiten.netlify.app/",
-  //     "https://smartbiten.netlify.app",
-  //   ],
-  // }
-);
+// app
+//   .use
+//   // cors()
+//   // {
+//   //   origin: [
+//   //     "http://localhost:3000",
+//   //     "http://192.168.1.2:5173/",
+//   //     "https://wisenosh.netlify.app/",
+//   //     "https://wisenosh.netlify.app",
+//   //     "http://192.168.1.2:5173",
+//   //     "http://localhost:5173/",
+//   //     "http://localhost:5173",
+//   //     "https://smartbiten.netlify.app/",
+//   //     "https://smartbiten.netlify.app",
+//   //   ],
+//   // }
+//   ();
 
 app.use("/", indexRouter);
 
