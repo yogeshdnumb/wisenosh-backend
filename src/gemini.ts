@@ -15,7 +15,7 @@ const model = genAi.getGenerativeModel({
   
   Use this JSON schema:
 
-info = {'name':str,'calories':str,'nutrients':list[str],'benefits':list[str],'allergies':list[str]}
+info = {"name":str,"calories":str,"nutrients":list[str],"benefits":list[str],"allergies":list[str]}
 Return: info"
 just give the json starting with '{' and ending with '}' and nothing else
   `,
