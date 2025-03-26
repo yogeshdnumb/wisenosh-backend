@@ -1,3 +1,0 @@
-
-      inlineData: {
-        data: imgBase64,
