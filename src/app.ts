@@ -1,6 +1,6 @@
 import express from "express";
-import indexRouter from "@/routers/index.router";
-import uploadRouter from "@/routers/upload.router";
+import indexRouter from "../src/routers/index.router";
+import uploadRouter from "../src/routers/upload.router";
 import morgan from "morgan";
 import cors from "cors";
 import "dotenv/config";

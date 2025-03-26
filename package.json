@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node dist/index.js",
-    "build": "tsc && tsc-alias",
+    "build": "tsc",
     "dev": "nodemon -e ts,js --exec ts-node --logError -r tsconfig-paths/register src/index.ts"
   },
   "keywords": [],
