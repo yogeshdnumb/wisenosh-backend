@@ -1,4 +1,4 @@
-import { getResponseFromBase64StrImg } from "../../src/utils/gemini";
+import { getResponseFromBase64StrImg } from "../utils/gemini";
 import { Request, Response } from "express";
 
 export async function uploadPost(req: Request, res: Response) {
